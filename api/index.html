@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presente - 2 meses</title>
+    <script>
+      // Check if the user is authenticated
+      if (!localStorage.getItem("passwordEntered")) {
+        window.location.href = "/password.html";
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <audio id="myAudio" src="boba.mp3"></audio>
+    <div class="container-fluid">
+      <main class="w-100">
+        <section class="text-center">
+          <h1 style="font-weight: bold">Cantinho da Mary</h1>
+          <p>Meus parabéns, separo esse cantinho muito especial para você.</p>
+          <p>Essa página vai mostrar o nosso amor ❤️,</p>
+          <p>sempre que tiver triste 😞</p>
+          <p>ou acha que eu não te amo 💔, vem aqui.</p>
+        </section>
+        <section>
+          <div class="row border">
+            <div
+              class="col-12 col-lg-6 border-end d-flex justifify-content-center align-items-center"
+            >
+              <img
+                src="https://th.bing.com/th/id/R.62d0d29097ce59495e943be4b1025f61?rik=Qc8VLKYCmRfwBg&riu=http%3a%2f%2f3.bp.blogspot.com%2f-GoUphTHX8gM%2fUb5v1Gz5r1I%2fAAAAAAAAATU%2f9iqi_tXgu1A%2fs1600%2f09.gif&ehk=87JSftM17stPxapl%2fZugpDWbrWK4WSqgqACrR08psj4%3d&risl=&pid=ImgRaw&r=0"
+                alt="moranguinho"
+              />
+            </div>
+            <div class="col-12 col-lg-6 d-flex flex-column">
+              <label class="text-center fw-bold fs-5 mb-4">Perfil</label>
+              <label>Nome: Maria Cândida Balbino Borges Gomes</label>
+              <div class="d-flex align-items-center justify-content-between">
+                <label>Comida favorita: Strogonoff</label>
+                <img
+                  style="width: 100px"
+                  src="https://gartic.com.br/imgs/mural/ca/carolguimaraesss/strogonoff.png"
+                  alt="Image"
+                />
+              </div>
+              <label>Sonho: Ser psicologa</label>
+              <label>Mascote Favorito: Gato</label>
+              <div
+                class="d-flex flex-row justify-content-between align-items-center"
+              >
+                <div id="image-container"></div>
+              </div>
+              <button id="add-image-button">Adotar um Gato</button>
+              <div>
+                  <label>Time: São Paulo</label>
+                  <img style="width: 100px" src="https://th.bing.com/th/id/R.f0fe7f4f8b36f99c5f1016673c51c65f?rik=aAY%2bAAzkdSvrSA&riu=http%3a%2f%2fwww.hdicon.com%2fwp-content%2fuploads%2f2011%2f04%2fSaoPauloFC.png&ehk=6hbPWVDA0hpwOsdEIJFPEBClvCL9CA4lmrFxeuUU%2f%2b8%3d&risl=&pid=ImgRaw&r=0" alt="saopaulo">
+              </div>
+              <label for="">Anime Favorito: One Piece</label>
+              <label for="">Dia de Aniversário: 16/09</label>
+              <label for="">Onde Mora: Santa Catarina</label>
+              <div id="map" style="height: 200px; width: 200px"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section>
+        <div class="declaracao m-5">
+          <div class="title fw-bold"># 2 meses</div>
+          <p>
+            Oie, meu amor. Hoje faz 2 meses que nós dois começamos a namorar,
+            você acha que vamos continuar por mais tempo? Eu espero que sim. Eu
+            gosto muito de você! Lembra quando a gente se conheceu? Então, você
+            era bem séria, eu ficava ate com medo, mas você me mandou uma foto
+            sua e foi amor a primeira vista, quando eu vi eu pensei logo, nossa
+            que menina linda, eu quero namorar com ela.
+          </p>
+          <p>
+            Eu conversava com você todo dia, até que no dia 29 de fevereiro de
+            2008, eu te perdi em namoro(pela 7 vezes) e você realmente aceitou.
+            Eu fiquei muito feliz e contente. Você é sim a melhor namorada que
+            eu poderia ter!
+          </p>
+          <p>
+            Eu poderia ficar aqui dizendo todas as qualidades que você tem, mas
+            ia demorar muito tempo falando e iria ficar um textão. Então, eu
+            queria dizer para você todas as vezes que eu briguei com você, me
+            desculpa, maioria das vezes eu fiz isso pelo seu bem, para cuidar de
+            você. Você já melhorou bastante e vai melhorar cada vez mais. Você é
+            uma menina incrivel. Gosto muito de você, eu sei que aconteceu aqui
+            por você ter ficado triste e tem os seus problemas, mas sempre pode
+            contar comigo e me falar as coisas viu, eu estou aqui para te ajudar
+            e te proteger, mesmo com meu jeito chato e protetor.
+          </p>
+          <p>
+            Você merece mais que isso, mas eu fiz esse site simples de coração
+            para você, realmente deu muito trabalho. Espero que goste e não ache
+            uma besteira. Esse site é só seu pode entrar aqui a hora que você
+            quiser, só você tem a senha.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Inclua o Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      // Crie um mapa e defina a visualização inicial para Santa Catarina
+      const map = L.map("map").setView([-27.2155, -51.1083], 8);
+
+      // Adicione um mapa base (por exemplo, OpenStreetMap)
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
+        map
+      );
+
+      // Adicione um marcador personalizado para Santa Catarina
+      const santaCatarinaIcon = L.icon({
+        iconUrl:
+          "https://icons.iconarchive.com/icons/paomedia/small-n-flat/96/heart-icon.png", // URL do ícone personalizado
+        iconSize: [32, 32], // Tamanho do ícone
+        iconAnchor: [16, 32], // Ponto de ancoragem do ícone
+      });
+
+      L.marker([-27.215556, -51.108398], { icon: santaCatarinaIcon })
+        .addTo(map)
+        .bindPopup("Santa Catarina, Maria por aqui!!!");
+
+      // Você pode adicionar mais marcadores conforme necessário
+
+      // ADICIONAR IMAGE
+
+      const imageContainer = document.getElementById("image-container");
+      const addImageButton = document.getElementById("add-image-button");
+
+      const images = [
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/014/179/737/original/cute-black-cat-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/018/746/485/non_2x/cat-white-design-free-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/023/477/119/non_2x/cute-cartoon-kawaii-cat-sticker-clipart-ai-generated-free-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/023/477/136/non_2x/cute-cartoon-kawaii-cat-sticker-clipart-ai-generated-free-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/025/221/500/non_2x/cute-cat-is-sitting-ai-generated-free-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/024/477/812/non_2x/beautiful-rainbow-cat-ai-generated-free-png.png",
+        },
+        {
+          src: "https://static.vecteezy.com/system/resources/previews/024/477/884/non_2x/cute-cat-eating-ice-cream-ai-generated-free-png.png",
+        },
+      ];
+
+      let currentImageIndex = 0;
+
+      addImageButton.addEventListener("click", () => {
+        const image = document.createElement("img");
+        image.src = images[currentImageIndex % images.length].src;
+        image.classList.toggle("cat-image");
+        imageContainer.appendChild(image);
+        currentImageIndex++;
+      });
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
