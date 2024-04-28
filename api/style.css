@@ -9,7 +9,7 @@
 body{
     background-image: linear-gradient(to right, #FFB7D2, #FF9EC5);
     font-family: 'ADLaM Display', sans-serif;
-    color: #472897;
+    color: #472897 !important;
 }
 
 .container-fluid{
