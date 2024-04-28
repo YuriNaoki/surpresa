@@ -4,11 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'ADLaM Display', sans-serif;
 }
 
 body{
-    background-image: linear-gradient(to right, #e67ebe, #FFD8E9);
+    background-image: linear-gradient(to right, #FFB7D2, #FF9EC5);
+    font-family: 'ADLaM Display', sans-serif;
+    color: #472897;
 }
 
 .container-fluid{
