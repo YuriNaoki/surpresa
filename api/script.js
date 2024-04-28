@@ -1,5 +1,5 @@
 // Function to check the password
-const correctPassword = "123";
+const correctPassword = "2meseshihi";
 const redirectUrl = "/index.html";
 
 function checkPassword() {
