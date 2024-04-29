@@ -176,19 +176,12 @@
 
       addImageButton.addEventListener("click", () => {
         const image = document.createElement("img");
-        setTimeout(() => {
-          image.src = images[currentImageIndex % images.length].src;
-        }, 1000);
+        const audio = document.getElementById('meowAudio');
+        image.src = images[currentImageIndex % images.length].src;
+        audio.play();
         image.classList.toggle("cat-image");
         imageContainer.appendChild(image);
         currentImageIndex++;
-      });
-
-      const button = document.getElementById('add-image-button');
-      const audio = document.getElementById('meowAudio');
-
-      button.addEventListener('click', function() {
-        audio.play();
       });
 
     </script>
