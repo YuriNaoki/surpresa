@@ -176,7 +176,9 @@
 
       addImageButton.addEventListener("click", () => {
         const image = document.createElement("img");
-        image.src = images[currentImageIndex % images.length].src;
+        setTimeout(() => {
+          image.src = images[currentImageIndex % images.length].src;
+        }, 1000);
         image.classList.toggle("cat-image");
         imageContainer.appendChild(image);
         currentImageIndex++;
