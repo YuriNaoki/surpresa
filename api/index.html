@@ -175,6 +175,10 @@
       let currentImageIndex = 0;
 
       addImageButton.addEventListener("click", () => {
+        addImageButton.disabled = true;
+        setTimeout(() => {
+          addImageButton.disabled = false;
+        }, 1000);
         const image = document.createElement("img");
         const audio = document.getElementById('meowAudio');
         image.src = images[currentImageIndex % images.length].src;
