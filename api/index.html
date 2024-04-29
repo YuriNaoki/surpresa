@@ -63,6 +63,7 @@
                 <div id="image-container"></div>
               </div>
               <button id="add-image-button">Adotar um Gato</button>
+              <audio id="meowAudio" src="miau.mp3"></audio>
               <div>
                   <label>Time: São Paulo</label>
                   <img style="width: 100px" src="https://th.bing.com/th/id/R.f0fe7f4f8b36f99c5f1016673c51c65f?rik=aAY%2bAAzkdSvrSA&riu=http%3a%2f%2fwww.hdicon.com%2fwp-content%2fuploads%2f2011%2f04%2fSaoPauloFC.png&ehk=6hbPWVDA0hpwOsdEIJFPEBClvCL9CA4lmrFxeuUU%2f%2b8%3d&risl=&pid=ImgRaw&r=0" alt="saopaulo">
@@ -180,6 +181,14 @@
         imageContainer.appendChild(image);
         currentImageIndex++;
       });
+
+      const button = document.getElementById('add-image-button');
+      const audio = document.getElementById('meowAudio');
+
+      button.addEventListener('click', function() {
+        audio.play();
+      });
+
     </script>
     <script src="indexjs.js"></script>
   </body>

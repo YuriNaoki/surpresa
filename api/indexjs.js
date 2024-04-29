@@ -4,7 +4,7 @@ const audio = document.getElementById('myAudio');
 
   audio.onended = function() {
     count++;
-    if (count < 5) {
+    if (count < 8) {
       audio.play();
     }
   };
